@@ -1,0 +1,13 @@
+def read_file(filename):
+    "Read the contents of FILENAME and return as a string."
+    #contents = ""
+infile = open("/home/brianyobra/Desktop/brian/a.i builds/a.i dev/nlp/python course/data/marijuana.txt") 
+contents = infile.read()
+print(contents)
+outfile = open("/home/brianyobra/Desktop/brian/a.i builds/a.i dev/nlp/python course/data/marijuana.txt", mode = "w")
+outfile.write("it passed 2")
+infile = open("/home/brianyobra/Desktop/brian/a.i builds/a.i dev/nlp/python course/data/marijuana.txt") 
+kobie = infile.read()
+print(kobie)
+infile.close()
+infile.close()
