@@ -1,0 +1,25 @@
+end_of_sentence_markers = ('.', '!', '?')
+
+def split_sentences(tokens):
+    sentences = []
+    begin = 0
+    for i, token in enumerate(tokens):
+        if token in end_of_sentence_markers: 
+            sentences.append(tokens[begin:i+1])
+            begin = i+1
+    return sentences
+
+# these tests should return True if your code is correct
+print(split_sentences( ['This','is','one','sentence','.','This','is','the','second','.']) == 
+ [ ['This','is','one','sentence','.'],['This','is','the','second','.'] ])
+print(split_sentences( ['Hello', 'world','!','I','know','Python','!']) == 
+[ ['Hello','world','!'],['I','know','Python','!'] ])
+
+# these tests should return True if your code is correct
+print(split_sentences( ['This','is','one','sentence','.','This','is','the','second','.']) == 
+ [ ['This','is','one','sentence','.'],['This','is','the','second','.'] ])
+print(split_sentences( ['Hello', 'world','!','I','know','Python','!']) == 
+[ ['Hello','world','!'],['I','know','Python','!'] ])
+
+
+
