@@ -1,0 +1,8 @@
+def end_of_sentence_marker(character):
+    for element in enumerate("hello world! i know python."):
+         print(element)
+    return character in '!?.'
+
+# these tests should return True if your code is correct
+print(end_of_sentence_marker("!") == True)
+print(end_of_sentence_marker("?") == True)
